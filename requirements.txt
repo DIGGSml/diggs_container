@@ -1,0 +1,8 @@
+requests
+pandas
+geojson
+openpyxl
+plotly
+lxml
+pydiggs
+nbformat
