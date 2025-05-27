@@ -1,0 +1,135 @@
+/* Custom styles for DIGGS Validator */
+
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+#diggs-logo {
+    max-height: 60px;
+}
+
+.error-item {
+    border-left: 4px solid #dc3545;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.warning-item {
+    border-left: 4px solid #ffc107;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.info-item {
+    border-left: 4px solid #0dcaf0;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.validation-success {
+    color: #198754;
+    font-weight: bold;
+}
+
+.validation-failure {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+pre {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 0.9rem;
+    overflow-x: auto;
+}
+
+.xml-viewer {
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+}
+
+.xml-tag {
+    color: #0d6efd;
+}
+
+.xml-attribute {
+    color: #6f42c1;
+}
+
+.xml-text {
+    color: #212529;
+}
+
+.xml-comment {
+    color: #6c757d;
+}
+
+.nav-tabs .nav-link {
+    cursor: pointer;
+}
+
+.result-summary {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+#downloadReportButton, #extractButton {
+    margin-left: 10px;
+}
+
+.code-block {
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    padding: 15px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    margin-bottom: 20px;
+    border: 1px solid #dee2e6;
+}
+
+.validation-table {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-collapse: collapse;
+}
+
+.validation-table th,
+.validation-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.validation-table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.severity-error {
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+.severity-warning {
+    background-color: rgba(255, 193, 7, 0.1);
+}
+
+.severity-info {
+    background-color: rgba(13, 202, 240, 0.1);
+}
+
+@media (max-width: 768px) {
+    #diggs-logo {
+        max-height: 40px;
+        margin-top: 10px;
+    }
+}

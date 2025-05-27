@@ -1,0 +1,25 @@
+127.0.0.1 - - [27/May/2025 13:45:23] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/May/2025 13:45:23] "GET /css/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [27/May/2025 13:45:24] "GET /js/app.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/May/2025 13:45:24] code 404, message File not found
+127.0.0.1 - - [27/May/2025 13:45:24] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [27/May/2025 13:45:24] "GET /xsl/validation-web.xsl HTTP/1.1" 200 -
+127.0.0.1 - - [27/May/2025 13:45:25] "GET /xsl/validation-report-html.xsl HTTP/1.1" 200 -
+127.0.0.1 - - [27/May/2025 13:51:02] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/May/2025 13:51:02] code 404, message File not found
+127.0.0.1 - - [27/May/2025 13:51:02] "GET /saxonjs3/SaxonJS3.js HTTP/1.1" 404 -
+127.0.0.1 - - [27/May/2025 13:51:02] "GET /css/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [27/May/2025 13:51:02] "GET /js/app.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/May/2025 13:51:03] code 404, message File not found
+127.0.0.1 - - [27/May/2025 13:51:03] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [27/May/2025 13:51:03] "GET /xsl/validation-web.xsl HTTP/1.1" 200 -
+127.0.0.1 - - [27/May/2025 13:51:03] "GET /xsl/validation-report-html.xsl HTTP/1.1" 200 -
+127.0.0.1 - - [27/May/2025 13:51:04] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/May/2025 13:51:05] "GET /js/app.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/May/2025 13:51:05] "GET /css/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [27/May/2025 13:51:05] code 404, message File not found
+127.0.0.1 - - [27/May/2025 13:51:05] "GET /saxonjs3/SaxonJS3.js HTTP/1.1" 404 -
+127.0.0.1 - - [27/May/2025 13:51:05] "GET /xsl/validation-report-html.xsl HTTP/1.1" 200 -
+127.0.0.1 - - [27/May/2025 13:51:05] code 404, message File not found
+127.0.0.1 - - [27/May/2025 13:51:05] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [27/May/2025 13:51:05] "GET /xsl/validation-web.xsl HTTP/1.1" 200 -

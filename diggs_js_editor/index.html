@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGGS XML Editor</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>DIGGS XML Editor</h1>
+        <div class="toolbar">
+            <button id="load-file">Load XML File</button>
+            <button id="save-file" disabled>Save XML</button>
+            <button id="validate" disabled>Validate</button>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="panel" id="structure-panel">
+            <h2>XML Structure</h2>
+            <div id="tree-view"></div>
+        </div>
+
+        <div class="panel" id="edit-panel">
+            <h2>Edit</h2>
+            <div id="form-container">
+                <p>Please load a DIGGS XML file to begin editing.</p>
+            </div>
+        </div>
+
+        <div class="panel" id="preview-panel">
+            <h2>XML Preview</h2>
+            <pre id="xml-preview"></pre>
+        </div>
+    </div>
+
+    <input type="file" id="file-input" accept=".xml" style="display: none;">
+
+    <!-- External libraries -->
+    <script src="lib/xml-js.min.js"></script>
+    
+    <!-- Application scripts -->
+    <script src="js/schema-loader.js"></script>
+    <script src="js/xml-parser.js"></script>
+    <script src="js/form-builder.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

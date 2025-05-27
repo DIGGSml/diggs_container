@@ -1,0 +1,157 @@
+/* Main layout */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem;
+}
+
+h1 {
+    margin-bottom: 0.5rem;
+}
+
+.toolbar {
+    display: flex;
+    gap: 0.5rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+.main-container {
+    display: flex;
+    height: calc(100vh - 85px);
+}
+
+.panel {
+    padding: 1rem;
+    overflow: auto;
+}
+
+#structure-panel {
+    flex: 1;
+    background-color: #f5f5f5;
+    border-right: 1px solid #ddd;
+}
+
+#edit-panel {
+    flex: 2;
+}
+
+#preview-panel {
+    flex: 1;
+    background-color: #f5f5f5;
+    border-left: 1px solid #ddd;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Tree View */
+#tree-view {
+    font-family: monospace;
+}
+
+.tree-node {
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.tree-node:hover {
+    background-color: #e0e0e0;
+}
+
+.tree-node.selected {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Form Styles */
+#form-container {
+    padding: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* XML Preview */
+#xml-preview {
+    font-family: monospace;
+    white-space: pre-wrap;
+    background-color: #fff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    height: calc(100% - 2.5rem);
+    overflow: auto;
+}
+
+/* Tags for XML highlighting */
+.tag-name {
+    color: #2980b9;
+}
+
+.attribute-name {
+    color: #c0392b;
+}
+
+.attribute-value {
+    color: #27ae60;
+}
+
+.text-content {
+    color: #333;
+}
+
+/* Responsive layout */
+@media (max-width: 992px) {
+    .main-container {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .panel {
+        height: 60vh;
+    }
+}

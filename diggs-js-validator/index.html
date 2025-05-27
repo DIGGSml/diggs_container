@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGGS Validator | JavaScript Edition</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Saxon-JS 3.0.0-beta1 -->
+    <script src="../saxonjs3/SaxonJS3.js"></script>
+    <!-- FileSaver.js for browser file saving -->
+    <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1>DIGGS File Validator</h1>
+                    <p class="lead">Browser-based validation tool for DIGGS XML files</p>
+                </div>
+                <div class="col-md-4 text-end">
+                    <img src="https://diggs.geosetta.org/_static/diggs.png" alt="DIGGS Logo" id="diggs-logo" height="60">
+                </div>
+            </div>
+        </header>
+
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Upload DIGGS File</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <input class="form-control" type="file" id="xmlFileInput" accept=".xml">
+                        </div>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button class="btn btn-primary" id="validateButton" disabled>Validate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4" id="validationResultSection" style="display: none;">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 id="validationStatus">Validation Results</h5>
+                        <div>
+                            <button class="btn btn-sm btn-outline-secondary" id="downloadReportButton">
+                                Download Report
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div id="validationResultContainer">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4" id="fileDetailsSection" style="display: none;">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5>File Details</h5>
+                        <div>
+                            <button class="btn btn-sm btn-outline-secondary" id="extractButton">
+                                Extract Data
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div id="fileDetailsContainer">
+                            <p>Loading file details...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="my-4 text-center text-muted">
+            <p>
+                &copy; 2025 GeoSetta - DIGGS JavaScript Validator | 
+                <a href="https://diggsml.org" target="_blank">DIGGS</a> | 
+                <a href="https://geosetta.org" target="_blank">GeoSetta</a>
+            </p>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Application JS -->
+    <script src="js/app.js"></script>
+</body>
+</html>
