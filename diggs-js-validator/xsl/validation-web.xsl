@@ -48,7 +48,8 @@
     <xsl:template match="/">
         <validationReport>
             <timestamp><xsl:value-of select="current-dateTime()"/></timestamp>
-            <fileName><xsl:value-of select="tokenize(document-uri(/), '/')[last()]"/></fileName>
+            <!-- In browser context, document-uri(/) returns empty, so use a fallback -->
+            <fileName><xsl:value-of select="if (document-uri(/) != '') then tokenize(document-uri(/), '/')[last()] else 'uploaded-file.xml'"/></fileName>
             <originalXml><xsl:value-of select="$originalXmlString"/></originalXml>
             
             <!-- Run DIGGS structure check first -->

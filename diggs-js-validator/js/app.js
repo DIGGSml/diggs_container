@@ -47,7 +47,7 @@ function preloadXsltStylesheets() {
     console.log('Preloading compiled SEF stylesheets...');
     
     // Load the main validation SEF
-    fetch('../diggs-validation.sef.json')
+    fetch('https://diggsml.org/def/validation/diggs-validation.sef.json')
         .then(response => response.json())
         .then(sef => {
             validationStylesheet = sef;
@@ -58,7 +58,7 @@ function preloadXsltStylesheets() {
         });
     
     // Load the HTML report SEF
-    fetch('../validation-report-html.sef.json')
+    fetch('https://diggsml.org/def/validation/validation-report-html.sef.json')
         .then(response => response.json())
         .then(sef => {
             reportStylesheet = sef;
@@ -153,7 +153,8 @@ function executeValidation(xmlContent) {
             destination: 'serialized',
             stylesheetParams: {
                 'useHttps': 'true',
-                'schemaBaseUrl': 'https://diggsml.org/schemas/2.6/'
+                'schemaBaseUrl': 'https://diggsml.org/schemas/2.6/',
+                'sourceDocumentUri': window.location.href
             }
         }).principalResult;
         

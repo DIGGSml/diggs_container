@@ -109,7 +109,9 @@
         <xsl:variable name="currentElement" select="."/>
         
         <!-- Pass the document URI to getResource function -->
-        <xsl:variable name="dictionaryResource" select="diggs:getResource($baseUrl, document-uri(/))"/>
+        <!-- In browser context, document-uri(/) returns empty, so use a fallback -->
+        <xsl:variable name="docUri" select="if (document-uri(/) != '') then document-uri(/) else 'https://diggsml.org/'"/>
+        <xsl:variable name="dictionaryResource" select="diggs:getResource($baseUrl, $docUri)"/>
         
         <xsl:choose>
             <xsl:when test="empty($dictionaryResource)">

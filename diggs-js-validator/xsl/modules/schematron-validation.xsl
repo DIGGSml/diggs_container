@@ -19,7 +19,9 @@
             
             <!-- Load the schematron file -->
             <xsl:variable name="schematronURL" select="'modules/diggs_validation_rules.sch'"/>
-            <xsl:variable name="schematronFile" select="diggs:getResource($schematronURL, document-uri(/))"/>
+            <!-- In browser context, document-uri(/) returns empty, so use a fallback -->
+            <xsl:variable name="docUri" select="if (document-uri(/) != '') then document-uri(/) else 'https://diggsml.org/'"/>
+            <xsl:variable name="schematronFile" select="diggs:getResource($schematronURL, $docUri)"/>
             
             <xsl:choose>
                 <xsl:when test="empty($schematronFile)">
